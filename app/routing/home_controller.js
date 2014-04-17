@@ -3,12 +3,12 @@ HomeController = RouteController.extend({
 
 	layoutTemplate: 'app',
 
-	before: function () {
+	onBeforeAction: function () {
 		Session.set('projects_tag', '');
 	},
 
-	after: function () {
-		var tags = this.getData().tags;
+	onAfterAction: function () {
+		var tags = this.data().tags;
 		if(tags.length > 0) {
 			$('#input-search').typeahead({
 				source: tags,

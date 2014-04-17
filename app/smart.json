@@ -6,17 +6,13 @@
     "spin": {},
     "accounts-ui-bootstrap-3": {},
     "gravatar": {},
-    "iron-router": {
-      "version": "0.6.4"
-    },
+    "iron-router": {},
     "moment": {},
     "rssfeed": {},
     "flextags": {},
     "phantomjs": {},
     "font-awesome": {},
-    "marked": {
-      "version": "0.3.1"
-    },
+    "marked": {},
     "nvd3js": {},
     "GAnalytics": {},
     "pagedown-bootstrap": {

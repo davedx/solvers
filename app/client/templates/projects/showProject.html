@@ -4,7 +4,7 @@
         {{> editProject}}
     {{else}}
         {{#if mayUpdateProject}}
-            <button class="project-edit-btn btn btn-xs pull-right" class="btn btn-default btn-xs">edit project</button>
+            <button class="project-edit-btn btn btn-xs pull-right">edit project</button>
         {{/if}}
         <div class="alert alert-info">
             <h2 id="project_name">{{name}}</h2>
@@ -63,7 +63,7 @@
                 {{#if hasOffered}}
                     <h2>Thanks for offering to help :)</h2>
                 {{else}}
-                    <h2>Want to help?</h3>
+                    <h2>Want to help?</h2>
                     {{#if currentUser}}
                     <button class="btn btn-success btn-lg offer-help-btn">Offer your skills</button>
                     {{else}}
@@ -75,5 +75,5 @@
         {{>comments}}
     {{/if}}
     </div>
-    {{>offer-help-modal}}
+    {{> offer_help_modal}}
 </template>

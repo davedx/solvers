@@ -1,15 +1,14 @@
-(function () {
-
-  Handlebars.registerHelper('renderSmallTags', function (mayUpdate, collection, options) {
-    if (options === undefined) { options = collection; collection = null }
-    if (Template.listOfSmallTags)
-      return new Handlebars.SafeString(Template.listOfSmallTags({
-          data : this, collection : collection, mayUpdate : mayUpdate
-        }));
-    return '';
-  });
-  
-})();
+UI.registerHelper('renderSmallTags', function (mayUpdate, collection, options) {
+  if (options === undefined) { options = collection; collection = null }
+  //DC: not sure why, but I needed to add a check for collection to stop it
+  //crashing. But now tags aren't shown on home page at all.
+  if (Template.listOfSmallTags && collection) {
+    return new Spacebars.SafeString(Template.listOfSmallTags({
+        data : this, collection : collection, mayUpdate : mayUpdate
+      }));
+  }
+  return '';
+});
 
 Template.listOfSmallTags.helpers({
   listOfSmallTags: function () {

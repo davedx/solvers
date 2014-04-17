@@ -7,8 +7,8 @@ Router.map(function () {
   this.route('home', {
     path: '/',
     controller: HomeController,
-    after: function() { GAnalytics.pageview('/'); },
-    before: function() {
+    onAfterAction: function() { GAnalytics.pageview('/'); },
+    onBeforeAction: function() {
       this.subscribe('notifications').wait();
     }
   });
@@ -16,20 +16,20 @@ Router.map(function () {
   // Notifications
   this.route('notifications', {
     path: '/notifications',
-    after: function() { GAnalytics.pageview('/notifications'); }
+    onAfterAction: function() { GAnalytics.pageview('/notifications'); }
   });
 
   // Projects by tag
   this.route('tagged', {
     path: '/projects/tag/:_tag',
     controller: HomeController,
-    after: function() { GAnalytics.pageview('/projects/tag/' + this.params._tag); }
+    onAfterAction: function() { GAnalytics.pageview('/projects/tag/' + this.params._tag); }
   });
 
   // New project
   this.route('newProject', {
     path: '/projects/new',
-    after: function() { GAnalytics.pageview('/projects/new'); }
+    onAfterAction: function() { GAnalytics.pageview('/projects/new'); }
   });
 
   // Show project
@@ -37,7 +37,7 @@ Router.map(function () {
     path: '/projects/:_id',
     notFoundTemplate: 'notFound',
     loadingTemplate: 'loading',
-    before:
+    onBeforeAction:
       function() {
         this.subscribe('projects').wait();
         this.subscribe('comments').wait();
@@ -51,7 +51,7 @@ Router.map(function () {
     waitOn: function() {
       return Meteor.subscribe('projects');
     },
-    after: function() {
+    onAfterAction: function() {
       GAnalytics.pageview('/projects/' + this.params._id);
       if (!Session.get(this.params._id)) {
         Meteor.call('addView', this.params._id, function(err) {
@@ -67,7 +67,7 @@ Router.map(function () {
   // Edit profile
   this.route('profile', {
     path: '/profile',
-    before: [
+    onBeforeAction: [
     function() {
       this.subscribe('projects').wait();
       this.subscribe('comments').wait();
@@ -80,13 +80,13 @@ Router.map(function () {
     data: function() {
       return Meteor.user();
     },
-    after: function() { GAnalytics.pageview('/profile'); }
+    onAfterAction: function() { GAnalytics.pageview('/profile'); }
   });
 
   // Show profile
   this.route('userCard', {
     path:'/profile/:_id',
-    before: [
+    onBeforeAction: [
     function() {
       this.subscribe('projects').wait();
       this.subscribe('comments').wait();
@@ -98,7 +98,7 @@ Router.map(function () {
     data: function() {
       return Meteor.users.findOne({ _id: this.params._id });
     },
-    after: function() { GAnalytics.pageview('/profile/' + this.params._id); }
+    onAfterAction: function() { GAnalytics.pageview('/profile/' + this.params._id); }
   });
 
   // Admin stats
@@ -111,25 +111,25 @@ Router.map(function () {
       this.subscribe('tasks'),
       this.subscribe('offers')];
     },
-    after: function() { GAnalytics.pageview('/stats'); }
+    onAfterAction: function() { GAnalytics.pageview('/stats'); }
   });
 
   // About
   this.route('about', {
     path: '/about',
-    after: function() { GAnalytics.pageview('/about'); }
+    onAfterAction: function() { GAnalytics.pageview('/about'); }
   });
 
   // Contact
   this.route('contact', {
     path: '/contact',
-    after: function() { GAnalytics.pageview('/contact'); }
+    onAfterAction: function() { GAnalytics.pageview('/contact'); }
   });
 
   // 404
   this.route('notFound', {
     path: '*',
-    after: function() { GAnalytics.pageview('/404'); }
+    onAfterAction: function() { GAnalytics.pageview('/404'); }
   });
 
 });

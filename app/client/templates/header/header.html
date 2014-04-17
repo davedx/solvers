@@ -12,7 +12,7 @@
                 <a class="brand back" href="{{pathFor 'home'}}" id="homeLink">
                     <span class='logo'>&lt;<span id='main'>Solvers</span><span id='tld'>.io</span>&gt;</span>
                 </a>
-            </div>
+            </div> <!-- /navbar-header -->
             <form class="navbar-form navbar-left hidden-sm hidden-xs" role="search">
                 <div class="form-group search-group">
                     <input type="text" id="input-search" class="form-control" data-provide="typeahead" placeholder="Search">
@@ -22,7 +22,7 @@
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
                     {{> adminButtons}}
-                    {{loginButtons}}
+                    {{> loginButtons}}
                     {{#if currentUser}}
                     <li>
                         <a id="gotoNotifications" href="{{pathFor 'notifications'}}" rel="tooltip" data-placement="bottom" title="view notifications">
@@ -33,6 +33,7 @@
                                 {{/if}}
                             </div>
                         </a>
+                    </li>
                     <li>
                         <a id="editProfile" href="{{pathFor 'profile'}}" rel="tooltip" data-placement="bottom" title="edit profile">
                             <span class="icon-bar glyphicon white glyphicon-user"></span>
@@ -45,7 +46,7 @@
                     </li>
                     {{/if}}
                 </ul>
-            </div>
-        </div>
-    </div>
+            </div> <!-- /navbar-collapse -->
+        </div> <!-- /container -->
+    </div> <!-- /navbar -->
 </template>

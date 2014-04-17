@@ -13,7 +13,7 @@
 
 <template name="offer_item">
   <li class="list-group-item">
-    <div class="col-md-6 offer-head"><p><strong><a href="{{pathFor 'profile'}}/{{userId}}"><img src="{{photoForUser userId}}"></img>{{userName}}</a> offered to help on {{formatDate madeOn}}</strong></p></div>
+    <div class="col-md-6 offer-head"><p><strong><a href="{{pathFor 'profile'}}/{{userId}}"><img src="{{photoForUser userId}}">{{userName}}</a> offered to help on {{formatDate madeOn}}</strong></p></div>
     <div class="col-md-6 offer-head">
       <div class="pull-right">
           <p>Email this solver: {{userEmail}}</p>
