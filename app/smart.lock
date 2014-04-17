@@ -5,18 +5,23 @@
       "spin": {},
       "accounts-ui-bootstrap-3": {},
       "gravatar": {},
-      "iron-router": {},
+      "iron-router": {
+        "version": "0.6.4"
+      },
       "moment": {},
       "rssfeed": {},
       "flextags": {},
       "phantomjs": {},
       "font-awesome": {},
-      "marked": {},
+      "marked": {
+        "version": "0.3.1"
+      },
       "nvd3js": {},
       "GAnalytics": {},
       "pagedown-bootstrap": {
         "version": "0.0.3"
-      }
+      },
+      "spiderfork": {}
     },
     "packages": {
       "spin": {
@@ -26,8 +31,8 @@
       },
       "accounts-ui-bootstrap-3": {
         "git": "https://github.com/mangasocial/meteor-accounts-ui-bootstrap-3.git",
-        "tag": "v0.2.5",
-        "commit": "91cd37a1320213dd209c3a668bf542eeb9c39a00"
+        "tag": "v0.3.0-1",
+        "commit": "93ffa5d0e325dc7026de89f6d90c178fa04bdd3a"
       },
       "gravatar": {
         "git": "https://github.com/tmeasday/meteor-gravatar.git",
@@ -36,8 +41,8 @@
       },
       "iron-router": {
         "git": "https://github.com/EventedMind/iron-router.git",
-        "tag": "v0.6.2",
-        "commit": "ce56e58b45624dce992490f3a1c10f10d3948bae"
+        "tag": "v0.6.4",
+        "commit": "927bbaed1b87894fb6fb70807f74ff3a5bd89f29"
       },
       "moment": {
         "git": "https://github.com/acreeger/meteor-moment.git",
@@ -66,8 +71,8 @@
       },
       "marked": {
         "git": "https://github.com/chuangbo/meteor-marked.git",
-        "tag": "v0.2.9",
-        "commit": "6485d6f03841501f81176e34ab375840473aa714"
+        "tag": "v0.3.1",
+        "commit": "3d9a9c94793b20e1ee7c807931cb536010d6f820"
       },
       "nvd3js": {
         "git": "https://github.com/ouuyeah/nvd3js.git",
@@ -83,6 +88,11 @@
         "git": "https://github.com/Blahah/meteor-pagedown-bootstrap.git",
         "tag": "v0.0.3",
         "commit": "940abd8b0137da751f60b8acdd53b8c5577a2f82"
+      },
+      "spiderfork": {
+        "git": "https://github.com/davedx/spiderfork.git",
+        "tag": "v0.0.1",
+        "commit": "69e2eace36d05774233167590e17c865a5baa058"
       },
       "crypto-md5": {
         "git": "https://github.com/oortcloud/meteor-crypto-md5.git",

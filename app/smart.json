@@ -3,17 +3,22 @@
     "spin": {},
     "accounts-ui-bootstrap-3": {},
     "gravatar": {},
-    "iron-router": {},
+    "iron-router": {
+      "version": "0.6.4"
+    },
     "moment": {},
     "rssfeed": {},
     "flextags": {},
     "phantomjs": {},
     "font-awesome": {},
-    "marked": {},
+    "marked": {
+      "version": "0.3.1"
+    },
     "nvd3js": {},
     "GAnalytics": {},
     "pagedown-bootstrap": {
       "version": "0.0.3"
-    }
+    },
+    "spiderfork": {}
   }
 }
