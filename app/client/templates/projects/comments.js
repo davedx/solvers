@@ -1,4 +1,4 @@
-Template.comments.helpers({
+Template.commentsList.helpers({
   comments: function() {
     var comments = Comments.find({
       parent: this._id
@@ -15,7 +15,7 @@ Template.comments.helpers({
   },
 });
 
-Template.comments.events({
+Template.commentsList.events({
   'mouseenter .comment': function(e) {
     $(e.currentTarget).find('.commentButtons').show();
   },

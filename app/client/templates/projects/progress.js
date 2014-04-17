@@ -10,11 +10,11 @@ Template.progress.helpers({
 	projectStatus: status
 });
 
-Template.progress_editable.helpers({
+Template.progressEditable.helpers({
 	projectStatus: status
 });
 
-Template.progress_bar.helpers({
+Template.progressBar.helpers({
     statusCompletion: function() {
         switch (this.status) {
             case 'ready':

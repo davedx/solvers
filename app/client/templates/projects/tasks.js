@@ -34,7 +34,7 @@ Template.tasks.events({
     }
 });
 
-Template.task_controls.rendered = function() {
+Template.taskControls.rendered = function() {
     if(!this.typeaheadInitialised) {
         var users = Meteor.users.find().fetch();
         if(users.length > 0) {
@@ -46,7 +46,7 @@ Template.task_controls.rendered = function() {
     }
 };
 
-Template.task_controls.events({
+Template.taskControls.events({
 	'click #add_task': function(e) {
 		$('#add_task_modal').modal();
         $('#task_name').val('');
