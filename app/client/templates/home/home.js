@@ -22,6 +22,9 @@ Template.home.helpers({
 	},
 	isSolved: function(status) {
 		return status === "solved";
+	},
+	projectsCount: function() {
+		return this.projects.count();
 	}
 });
 

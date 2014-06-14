@@ -5,6 +5,10 @@
 @salmon: #FF6B6B;
 @rose: #C44D58;
 
+body {
+	background-color: #eeeeee;
+}
+
 // outlines
 *:focus {
 	outline: none;
@@ -41,7 +45,7 @@ a {
 }
 
 // Home page
-.navbar {
+.navbar-solvers {
 	margin-bottom: 0;
 }
 .call-to-action {
@@ -51,10 +55,11 @@ a {
 	.header {
 		width: 720px;
 		margin: 0 auto;
-		padding: 82px 0 36px;
+		padding: 70px 0 36px;
 		font-family: 'Open Sans', sans-serif;
 		font-weight: 800;
 		font-size: 45px;
+		line-height: 1.3em;
 		text-align: center;
 		color: white;
 	}
@@ -129,27 +134,57 @@ a {
 	font-size: 1.5em;
 }
 
+#projectList {
+	padding: 60px 50px;
+}
+.project-count {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 20px;
+	color: #333;
+	margin: 8px 0 12px 5px;
+}
 .projects {
-	margin-top: 30px;
-	padding: 0 15px;
+	margin: 0;
+	padding: 0;
 	li {
+		font-family: 'Open Sans', sans-serif;
+		box-sizing: border-box;
+		border-left: 5px solid #3ab1f5;
+		background-color: white;
+		box-shadow: 0px 0px 5px #ddd;
 		cursor: pointer;
-		padding: 20px 0;
-		border-bottom: 1px solid #ccc;
+		padding: 8px 20px 10px 20px;
+		margin-bottom: 25px;
 		.showProject {
-			font-size: 1.3em;
+			font-size: 24px;
+			line-height: 45px;
+			color: #3686be;
 			text-decoration: none;
-		}
-		a {
-			font-weight: bold;
 		}
 		.date {
 			margin-top: 5px;
 		}
 		.deleteProject {
+			margin-top: 10px;
 			margin-left: 10px;
 		}
 	}
+}
+.project-list-tags {
+	margin: 10px 0 15px;
+	.label {
+		background-color: #eee;
+		border: 1px solid #d4d4d4;
+		color: #424242;
+		font-family: 'Open Sans', sans-serif;
+		font-weight: 600;
+		font-size: 16px;
+		border-radius: 1px;
+		padding-bottom: .2em;
+	}
+}
+.label-success {
+	margin-left: 10px;
 }
 
 .date {
@@ -330,11 +365,4 @@ margin-left: 0;
 		margin-top: 21;
 		margin-bottom: 0;
 	}
-}
-
-.project-list-tags {
-	margin-bottom: 5px;
-}
-.label-success {
-	margin-left: 10px;
 }
